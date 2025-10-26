@@ -9,9 +9,10 @@ import SwiftUI
 
 struct Colors: View {
     var body: some View {
-        Image(.tonfly)
+        Image(.tonfly2)
             .resizable()
             .scaledToFit()
+            .colorEffect(ShaderLibrary.colors(.boundingRect))
     }
 }
 
