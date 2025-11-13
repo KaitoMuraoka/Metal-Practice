@@ -21,7 +21,7 @@ using namespace metal;
     }
 }
 
-// みずたまー
+// 水玉
 [[stitchable]] half4 polkaDot(float2 position, half4 color,float4 boundingRect,float zoom){
     float2 isResolution = boundingRect.zw;
     float2 uv = position / isResolution;

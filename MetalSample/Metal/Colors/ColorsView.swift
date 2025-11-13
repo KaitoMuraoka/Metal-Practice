@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Colors: View {
+struct ColorsView: View {
     var body: some View {
         Image(.tonfly2)
             .resizable()
@@ -17,5 +17,5 @@ struct Colors: View {
 }
 
 #Preview {
-    Colors()
+    ColorsView()
 }
