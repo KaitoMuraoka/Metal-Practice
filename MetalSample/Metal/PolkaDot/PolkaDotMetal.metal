@@ -1,27 +1,13 @@
 //
-//  Metals.metal
+//  PolkaDotMetal.metal
 //  MetalSample
 //
-//  Created by KaitoMuraoka on 2025/10/26.
+//  Created by KaitoMuraoka on 2025/11/13.
 //
 
 #include <metal_stdlib>
 using namespace metal;
 
-[[stitchable]] half4 colors(float2 position, half4 color, float4 rect) {
-    //return half4(1, 0, 0, 1); // RGBA
-    //return color.rrra;
-    //return half4(1-color.rgb, 1);
-    
-    float2 uv = position / rect.zw; // 正規化
-    if (uv.y < 0.5) {
-        return half4(1 - color.rgb, 1);
-    } else {
-        return color;
-    }
-}
-
-// 水玉
 [[stitchable]] half4 polkaDot(float2 position, half4 color,float4 boundingRect,float zoom){
     float2 isResolution = boundingRect.zw;
     float2 uv = position / isResolution;
